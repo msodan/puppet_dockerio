@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#[[ -z "$1" ]] && echo "Usage: $0 <CID>" && exit 1
+docker run -d -h puppetmaster --name="p_master" puppetmaster

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#[[ -z "$1" ]] && echo "Usage: $0 <CID>" && exit 1
+
+for i in $(seq 1 5)
+  do n=$(printf "%03d" $i)
+   docker run -d -h p_client_$i --name="p_client_$i" -P --link p_master:puppetmaster  puppetclient
+ done
